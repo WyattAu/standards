@@ -8,6 +8,7 @@ help:
 
 audit:
 	@python3 standards-audit.py --root .
+	@python3 scripts/voice-lint.py --strict .
 
 lint:
 	@if command -v markdownlint >/dev/null 2>&1; then markdownlint "**/*.md" --config .markdownlint.json; \

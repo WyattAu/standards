@@ -1,6 +1,6 @@
 # STANDARDS-CORE: what a standard is
 
-> **Status: CURRENT (v0.1.0, 2026-10-31).** Normative and living: changes
+> **Status: CURRENT (v0.2.0, 2026-10-31).** Normative and living: changes
 > require an ADR in `docs/adr/`, a header version bump, and a CHANGELOG
 > entry. Cited by the audit as `STANDARDS-CORE §N`.
 
@@ -96,12 +96,17 @@ Declined domains get an ADR (the tombstone) instead of a DRAFT file.
 |---|---|
 | `standards-audit.py --root .` | registry schema; dependency resolution; anatomy per standard (§4 sections present); lifecycle stamps; semver; character rule; self-conformance of this document |
 
-## §8 Projections
+## §8 Projections and visibility
 
 Standards are canon. Skills, MCP servers, and doc sites that repackage
 them are projections (SPEC-CORE SC-11, OMNI-CORE 11p): they declare their
 source rev, are rebuilt by CI, and a stale projection fails the canon's
 gate.
+
+Canon repos are public by default: standards that cannot be read cannot
+be followed, and secrecy adds a scrub tax to every projection. A private
+standards canon requires an ADR naming the secrecy interest. Standards
+repos carry Apache-2.0 (toolchain class, LICENSING LI-2).
 
 ## §9 Declining a standard
 
