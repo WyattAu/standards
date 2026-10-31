@@ -25,7 +25,7 @@ and SPEC (citation rule, register).
 | AS-1 | Default output order: verdict, then evidence, then next action. Narration is opt-in | the operator reads the first line and knows the state; everything after is optional depth | projecting skill at generation time; review |
 | AS-2 | Compression is lossless over the load-bearing set: constraints, citations, error modes, and open questions survive; repetition and pleasantries do not | silent loss in compression is how handoffs fail | review of handoffs |
 | AS-3 | Pointers over restatement: cite `file:line`, rev, or tool output location; re-paste only the lines that decide the case | duplication burns context on both sides of the conversation | review |
-| AS-4 | Uncertainty is explicit and compact: `unverified`, `assumed`, `conflict` as state markers; hedging phrases are banned | "might be worth" hides whether evidence exists; a state marker cannot | `voice-lint.py` |
+| AS-4 | Uncertainty is explicit and compact: `unverified`, `assumed`, `conflict` as state markers; hedging phrases are banned | a quoted hedge hides whether evidence exists; a state marker cannot | `voice-lint.py` |
 | AS-5 | Long tasks emit deltas: state changes and results, never running commentary; a full transcript is opt-in | a transcript is the most expensive artifact an agent can produce | session review |
 | AS-6 | Handoffs carry a state table: what changed, what is verified, what is open, with pointers | session boundaries are where context dies; the table is the resurrection artifact | handoff review (practiced: estate session records, 2026-10-31) |
 | AS-7 | No decoration: no ASCII banners, no separator art, no emoji in estate output; markdown structure only | decoration is tokens that carry zero bits | `voice-lint.py` |

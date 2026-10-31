@@ -27,7 +27,7 @@ with rejected alternative), citation rule, character rule; SPEC-CORE SC-3
 | PR-5 | Claims carry units, measurement method, and scope: "P99 under 5 ms at 10k req/s, criterion commit `abc`", not "fast" | a number without its measurement is an anecdote | DOC-STYLE register (inherited) |
 | PR-6 | Filler patterns are banned (normative list enforced by `voice-lint.py`): `it is worth noting`, `in order to`, `essentially`, `basically`, `utilize`, `please note that` | they add tokens and subtract information; their replacements are always shorter and equal | `voice-lint.py` (strict in standards repos; dated window estate-wide) |
 | PR-7 | Long documents open with a summary block: the state of the world in one table or one paragraph | the reader who stops after line one is still correctly informed | review |
-| PR-8 | Hedging is replaced by state: write `unverified`, `assumed`, `conflict`, not "might", "perhaps", "it seems" | hedges hide which claims carry evidence | `voice-lint.py` |
+| PR-8 | Hedging is replaced by the state marker: write the marker (`unverified`, `assumed`, `conflict`), never the hedge (`perhaps`, `it seems`, `I think`, `might be worth`) | hedges hide which claims carry evidence | `voice-lint.py` |
 
 ## Gates
 
