@@ -1,0 +1,11 @@
+# standards
+
+> L0 meta-standard for the WyattAu standards estate plus L2 domain
+> standards: skill, mcp, licensing, coding, math, invariants, design.
+> The universal canons (engineering-standards, spec-standards) are L1
+> and live in their own repos; domain standards tighten, never loosen.
+
+- STANDARDS-CORE.md: identity, anatomy, dependency mechanics, lifecycle
+- standards/SKILL.md, MCP.md, LICENSING.md, CODING.md, MATH.md, INVARIANTS.md, DESIGN.md
+- standards.yml: registry of record (dependency contract)
+- standards-audit.py: mechanical conformance gate

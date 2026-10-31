@@ -1,0 +1,60 @@
+# Standards registry of record (the dependency contract).
+# Layer: l0 meta | l1 universal canon (external) | l2 domain
+schema: 1
+updated: "2026-10-31"
+canons:
+  ENGINEERING:
+    repo: WyattAu/engineering-standards
+    major: 1
+  SPEC:
+    repo: WyattAu/spec-standards
+    major: 1
+standards:
+  STANDARDS-CORE:
+    layer: l0
+    file: STANDARDS-CORE.md
+    version: 0.1.0
+    status: current
+    depends: []
+  SKILL:
+    layer: l2
+    file: standards/SKILL.md
+    version: 0.1.0
+    status: current
+    depends: [STANDARDS-CORE@^0.1, ENGINEERING@^1, SPEC@^1]
+  MCP:
+    layer: l2
+    file: standards/MCP.md
+    version: 0.1.0
+    status: current
+    depends: [STANDARDS-CORE@^0.1, ENGINEERING@^1]
+  LICENSING:
+    layer: l2
+    file: standards/LICENSING.md
+    version: 0.1.0
+    status: current
+    depends: [STANDARDS-CORE@^0.1, ENGINEERING@^1]
+  CODING:
+    layer: l2
+    file: standards/CODING.md
+    version: 0.1.0
+    status: current
+    depends: [STANDARDS-CORE@^0.1, ENGINEERING@^1]
+  MATH:
+    layer: l2
+    file: standards/MATH.md
+    version: 0.1.0
+    status: current
+    depends: [STANDARDS-CORE@^0.1, SPEC@^1]
+  INVARIANTS:
+    layer: l2
+    file: standards/INVARIANTS.md
+    version: 0.1.0
+    status: current
+    depends: [STANDARDS-CORE@^0.1, ENGINEERING@^1, SPEC@^1]
+  DESIGN:
+    layer: l2
+    file: standards/DESIGN.md
+    version: 0.1.0
+    status: draft
+    depends: [STANDARDS-CORE@^0.1]

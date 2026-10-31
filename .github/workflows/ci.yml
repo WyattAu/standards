@@ -1,0 +1,19 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: standards audit (self-conformance)
+        run: python3 standards-audit.py --root .
+      - name: markdownlint
+        run: npx -y markdownlint-cli "**/*.md" --config .markdownlint.json
