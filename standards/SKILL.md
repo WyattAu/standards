@@ -1,6 +1,6 @@
 # SKILL: agent skill standard
 
-> **Status: CURRENT (v0.1.0, 2026-10-31)**
+> **Status: CURRENT (v0.1.1, 2026-10-31)**
 
 **Layer:** L2 · **Depends:** STANDARDS-CORE@^0.1, ENGINEERING@^1, SPEC@^1 · **Date:** 2026-10-31
 
@@ -20,7 +20,7 @@ projection freshness SC-11).
 
 | Id | Statement | Why | Enforcement |
 |---|---|---|---|
-| SK-1 | Frontmatter fields are exactly `name`, `description`, `allowed-tools`, `license`; `name` is lowercase-hyphen, at most 64 chars | agents route on description; a rogue field breaks the parsers | `skillkit lint` (crates: skillkit) |
+| SK-1 | Frontmatter core fields are `name` (lowercase-hyphen, at most 64 chars) and `description` (under 1024 chars, stating what and when). Two declared dialects build on the core: the **distribution dialect** adds `allowed-tools` + `license` (required for packaged skills); the **opencode dialect** adds `compatibility` + `metadata` (audience, workflow, slash/autoinvoke flags). Extensions are declared here, never accidental | agents route on description; a rogue undeclared field breaks parsers; the estate runs two real dialects and the standard codifies them instead of wishing one away | `skillkit lint` (distribution dialect); structural audit (core fields); review (extensions declared)
 | SK-2 | `description` states what the skill does and when to load it, under 1024 chars | the description is the routing key; a vague description is an unloaded skill | `skillkit lint` |
 | SK-3 | Executable steps live in `scripts/`, long-form prose in `references/`; SKILL.md stays lean | progressive disclosure; a 5k-word SKILL.md burns every caller's context | `skillkit lint` + review |
 | SK-4 | `allowed-tools` is minimal and honest | a skill with write access is a mutation surface; least privilege (OMNI-CORE 10) | `skillkit lint` + review |
